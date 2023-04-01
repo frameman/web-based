@@ -1,0 +1,720 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(43, 86%, 17%);
+  --clr-primary-2: hsl(43, 77%, 27%);
+  --clr-primary-3: hsl(43, 72%, 37%);
+  --clr-primary-4: hsl(42, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(42, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(43, 89%, 70%); 
+  --clr-primary-7: hsl(43, 90%, 76%);
+  --clr-primary-8: hsl(45, 86%, 81%);
+  --clr-primary-9: hsl(45, 90%, 88%);
+  --clr-primary-10: hsl(45, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+}
+
+body {
+  background-image: url(../images/A2B5766D-2EC5-4123-BE81-8B8AD83D9E6C1.jpg);
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+}
+
+.back {
+  background-color: #ffffff7b;
+  height: 1280px;
+}
+
+/*
+=========
+navbar
+=========
+*/
+img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+}
+.nav {
+  background-color: #ffffff7b;
+  display: block;
+  align-items: center;
+  height: 4rem;
+  transition: var(--transition);
+  
+    .nav-center {
+      display: flex;  
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      max-width: 1170px;
+      margin: 0 auto;
+    }
+  
+    .nav-header h3 {
+      padding-top: 0.7rem;
+    }
+  
+    .nav-btn {
+      position: flex;
+      margin-top: 4rem;
+      background-color: transparent;
+      border-color: transparent;
+      font-size: 2rem;
+      color:#1F4950;
+      cursor: pointer;
+    }
+}
+  
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 5;
+  box-shadow: var(--light-shadow);
+}
+
+
+/*
+=============== 
+Sidebar
+===============
+*/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 7;
+}
+
+.sidebar a {
+  font-family: 'Lustria';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18.809px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.13em;
+
+  color: #6D6F6E;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: rgba(122, 122, 122, 0.35);
+}
+
+#main {
+  transform: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: #bb2525;
+  cursor: pointer;
+  transition: var(--transition);
+  transform: translateX(-100%);
+}
+.sidebar .close-btn:hover {
+  color: #e66b6b;
+}
+
+.show-sidebar {
+  transform: translateX(0);
+}
+
+/*
+===========
+SSO
+===========
+*/
+.SSO-btn {
+  a {
+    /* Rectangle 5 */
+    position: absolute;
+    left: calc(50% - 150px);
+    top: calc(50% - 106px/2 + 54.5px);
+    background: rgba(250, 255, 253, 0.9);;
+    color: #46747E;
+    padding: 0.375rem 0.75rem;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 700;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    font-size: 18px;
+    border: 12px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+  }
+}
+
+/*
+===========
+section
+===========
+*/
+.section-title {
+  p {
+    position: absolute;
+    white-space: nowrap;
+    width: 273px;
+    height: 31px;
+    left: calc(50% - 273px/2 - 0.5px);
+    top: calc(50% - 31px/2 - 152px);
+    
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: bold;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.15em;
+    
+    color: #355C65;
+    
+    text-shadow: 4px 4px 4px rgba(122, 122, 122, 0.35);
+  }
+}
+
+
+.section-Copyright {
+  p {
+    position: absolute;
+    white-space: nowrap;
+    width: 134px;
+    height: 13px;
+    left: calc(50% - 134px/2);
+    top: calc(50% - 125px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 13px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #FFFFFF;
+  }
+  h3 {
+    position: absolute;
+    white-space: nowrap;
+    width: 486px;
+    height: 18px;
+    left: calc(50% - 486px/2);
+    top: calc(50% - 118px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #F4FBFF;
+  }
+}
+
+.student {
+  h3 {
+    position: absolute;
+    white-space: nowrap;
+    width: 536px;
+    left: calc(50% - 536px/2);
+    top: calc(50% - 50px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 10px;
+
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #7E7E7E; 
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .section-title {
+    position: absolute;
+    width: 273px;
+    height: 31px;
+    left: calc(50% - 273px/2 - 0.5px);
+    top: calc(50% - 31px/2 - 152px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #355C65;
+
+    text-shadow: 4px 4px 4px rgba(122, 122, 122, 0.35);
+
+  }
+
+  .section-Copyright {
+    position: absolute;
+    width: 134px;
+    height: 13px;
+    left: calc(50% - 134px/2);
+    top: calc(50% - 13px/2 - 130px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #F0F0F0;
+      p {
+        position: absolute;
+        width: 134px;
+        height: 13px;
+        left: calc(50% - 134px/2);
+        top: calc(50% - 13px/2 - 130px);
+
+        font-family: 'Lustria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13px;
+
+        text-align: center;
+        letter-spacing: 0.09em;
+
+        color: #F0F0F0;
+      }
+      h3 {
+        position: absolute;
+        width: 486px;
+        height: 18px;
+        left: calc(50% - 486px/2);
+        top: calc(50% - 18px/2 - 104.5px);
+
+        font-family: 'Lustria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+        text-align: center;
+        letter-spacing: 0.09em;
+
+        color: #F4FBFF;
+
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+      }
+  }
+  .student {
+    h3 {
+      position: absolute;
+      width: 536px;
+      height: 23px;
+      left: calc(50% - 536px/2);
+      top: calc(50% - 23px/2 - 32px);
+
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 18px;
+      line-height: 23px;
+
+      text-align: center;
+      letter-spacing: 0.15em;
+
+      color: #7E7E7E;
+    }
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  .section-title {
+    position: absolute;
+    width: 273px;
+    height: 31px;
+    left: calc(50% - 273px/2 - 0.5px);
+    top: calc(50% - 31px/2 - 152px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #355C65;
+
+    text-shadow: 4px 4px 4px rgba(122, 122, 122, 0.25);
+
+  }
+
+  .section-Copyright {
+    position: absolute;
+    width: 134px;
+    height: 13px;
+    left: calc(50% - 134px/2);
+    top: calc(50% - 13px/2 - 130px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #F0F0F0;
+      p {
+        position: absolute;
+        width: 134px;
+        height: 13px;
+        left: calc(50% - 134px/2);
+        top: calc(50% - 13px/2 - 130px);
+
+        font-family: 'Lustria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13px;
+
+        text-align: center;
+        letter-spacing: 0.09em;
+
+        color: #F0F0F0;
+      }
+      h3 {
+        position: absolute;
+        width: 486px;
+        height: 18px;
+        left: calc(50% - 486px/2);
+        top: calc(50% - 18px/2 - 104.5px);
+
+        font-family: 'Lustria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+        text-align: center;
+        letter-spacing: 0.09em;
+
+        color: #F4FBFF;
+
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+      }
+  }
+  .student {
+    h3 {
+      position: absolute;
+      width: 536px;
+      height: 23px;
+      left: calc(50% - 536px/2);
+      top: calc(50% - 23px/2 - 32px);
+
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 18px;
+      line-height: 23px;
+
+      text-align: center;
+      letter-spacing: 0.15em;
+
+      color: #7E7E7E;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .section-title {
+    position: absolute;
+    width: 273px;
+    height: 31px;
+    left: calc(50% - 273px/2 - 0.5px);
+    top: calc(50% - 31px/2 - 152px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #355C65;
+
+    text-shadow: 4px 4px 4px rgba(122, 122, 122, 0.25);
+
+  }
+
+  .section-Copyright {
+      position: absolute;
+      width: 134px;
+      height: 13px;
+      left: calc(50% - 134px/2);
+      top: calc(50% - 13px/2 - 130px);
+      
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 13px;
+      
+      text-align: center;
+      letter-spacing: 0.09em;
+      
+      color: #F0F0F0;
+      p {
+        position: absolute;
+        width: 134px;
+        height: 13px;
+        left: calc(50% - 134px/2);
+        top: calc(50% - 13px/2 - 130px);
+
+        font-family: 'Lustria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13px;
+
+        text-align: center;
+        letter-spacing: 0.09em;
+
+        color: #F0F0F0;
+      }
+      h3 {
+        position: absolute;
+        width: 486px;
+        height: 18px;
+        left: calc(50% - 486px/2);
+        top: calc(50% - 18px/2 - 104.5px);
+
+        font-family: 'Lustria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+        text-align: center;
+        letter-spacing: 0.09em;
+
+        color: #F4FBFF;
+
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+      }
+  }
+  .student {
+    h3 {
+      position: absolute;
+      width: 536px;
+      height: 23px;
+      left: calc(50% - 536px/2);
+      top: calc(50% - 23px/2 - 32px);
+
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 18px;
+      line-height: 23px;
+
+      text-align: center;
+      letter-spacing: 0.15em;
+
+      color: #7E7E7E;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-title {
+    position: absolute;
+    width: 273px;
+    height: 31px;
+    left: calc(50% - 273px/2 - 0.5px);
+    top: calc(50% - 31px/2 - 152px);
+
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #355C65;
+
+    text-shadow: 4px 4px 4px rgba(122, 122, 122, 0.25);
+
+  }
+
+  .section-Copyright {
+    position: absolute;
+    width: 134px;
+    height: 13px;
+    left: calc(50% - 134px/2);
+    top: calc(50% - 13px/2 - 130px);
+    
+    font-family: 'Lustria';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    
+    text-align: center;
+    letter-spacing: 0.09em;
+    
+    color: #F0F0F0;
+
+    p {
+      position: absolute;
+      width: 134px;
+      height: 13px;
+      left: calc(50% - 134px/2);
+      top: calc(50% - 13px/2 - 130px);
+
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 13px;
+
+      text-align: center;
+      letter-spacing: 0.09em;
+
+      color: #F0F0F0;
+
+    }
+    h3 {
+      position: absolute;
+      width: 486px;
+      height: 18px;
+      left: calc(50% - 486px/2);
+      top: calc(50% - 18px/2 - 104.5px);
+
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+
+
+      text-align: center;
+      letter-spacing: 0.09em;
+
+      color: #F4FBFF;
+
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .student {
+    h3 {
+      position: absolute;
+      white-space: nowrap;
+      width: 536px;
+      height: 23px;
+      left: calc(50% - 536px/2);
+      top: calc(50% - 23px/2 - 32px);
+
+      font-family: 'Lustria';
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 18px;
+      line-height: 23px;
+
+      text-align: center;
+      letter-spacing: 0.15em;
+
+      color: #7E7E7E;
+    }
+
+  }
+}

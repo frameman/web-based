@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淡江大學選課推薦系統</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>  
+  <!-- navbar -->
+  <nav class="nav" id="main">
+    <div class="nav-center">
+      <button class="nav-btn">
+        <i class="fa-solid fa-bars" onclick="openNav()"></i>
+      </button>
+      
+      <button class="nav-btn">
+        <i class="fa-regular fa-user"></i>
+      </button>
+    </div>
+  </nav>
+  <!-- end of navbar -->
+  <!-- sidebar -->
+  <aside class="sidebar" id="mySidenav">
+    <div>
+      <button class="close-btn" id="close-btn">
+        <i class="fa-solid fa-times" onclick="closeNav()"></i>
+      </button>
+      <ul>
+        <li>
+          <a th:text="${name}" href="index.html">我的收藏</a>
+        </li>
+        <li>
+          <a href="about.html">排課表</a>
+        </li>
+        <li>
+          <a href="projects.html">課程心得填寫</a>
+        </li>
+        <li>
+          <a href="contact.html">網頁導覽</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- end of sidebar -->
+  <section class="back" id="backNav">
+    <div class="section-title">
+    <p>淡江大學選課推薦系統</p>
+    </div>
+    
+    <div class="section-Copyright">
+      <p>Copyright from TKUAIIC</p>
+      <h3>Tamkang University Course Selection Recommendation System</h5>  
+    </div>
+    
+    <div class="inputClass">
+        <input type="text" placeholder="請輸入您想查詢的課程">
+        <box><p>搜尋</p></box>
+        <p class="look">大家都在看..</p>
+    </div>
+  </section>
+
+  <section class="card" id="cardNav">
+    <div class="card1">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+    
+    <div class="card1">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    <div class="card1">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    <div class="card1">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    <div class="card2">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    <div class="card2">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    <div class="card2">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    <div class="card2">
+      <card-title>3853</card-title>
+      <card-text>人際關係與溝通</card-text>
+      <card-judge>★★★★★ | 58</card-judge>
+      <card-name>胡延薇</card-name>
+      <card-analyze>社會領域 社會分析學門(W群)</card-analyze>
+      <a href="#" class="btn"></a>
+      <a href="#" class="btn-like"></a>
+      <i class="fa-solid fa-heart-circle-plus"></i>
+    </div>
+
+    
+  </section>
+
+  <script src="./js/script.js"></script>
+  
+</body>
+</html>

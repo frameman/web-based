@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淡江大學選課推薦系統</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>  
+  <nav class="nav" id="main">
+    <div class="nav-center">
+      <button class="nav-btn">
+        <i class="fa-solid fa-bars" onclick="openNav()"></i>
+      </button>
+      
+      <button class="nav-btn">
+        <i class="fa-regular fa-user"></i>
+      </button>
+    </div>
+  </nav>
+  <!-- end of navbar -->
+  <!-- sidebar -->
+  <aside class="sidebar" id="mySidenav">
+    <div>
+      <button class="close-btn" id="close-btn">
+        <i class="fa-solid fa-times" onclick="closeNav()"></i>
+      </button>
+      <ul>
+        <li>
+          <a href="index.html">我的收藏</a>
+        </li>
+        <li>
+          <a href="about.html">排課表</a>
+        </li>
+        <li>
+          <a href="projects.html">課程心得填寫</a>
+        </li>
+        <li>
+          <a href="contact.html">網頁導覽</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <section class="back">
+    <div class="section-title">
+    <p>淡江大學選課推薦系統</p>
+    </div>
+    
+    <div class="section-Copyright">
+      <p>Copyright from TKUAIIC</p>
+      <h5>Tamkang University Course Selection Recommendation System</h5>
+    </div>
+
+    <div class="student">
+      <h3>是淡江大學的學生嗎？請使用單一入口登入體驗完整功能！</h3>
+    </div>
+
+    <div class="SSO-btn">
+      <a href="#">淡江大學單一登入(SSO)</a>
+    </div>
+  </section>
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
